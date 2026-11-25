@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://quifox.github.io/academic/</loc></url>
+  <url><loc>https://quifox.github.io/academic/papers/10.5281/zenodo.24528573.html</loc></url>
   <url><loc>https://quifox.github.io/academic/papers/10.21203/rs.3.rs-11817786/v1.html</loc></url>
   <url><loc>https://quifox.github.io/academic/papers/10.5281/zenodo.24409822.html</loc></url>
+  <url><loc>https://quifox.github.io/academic/papers/10.5281/zenodo.24528573.pdf</loc></url>
   <url><loc>https://quifox.github.io/academic/papers/10.21203/rs.3.rs-11817786/v1.pdf</loc></url>
   <url><loc>https://quifox.github.io/academic/papers/10.5281/zenodo.24409822.pdf</loc></url>
 </urlset>
