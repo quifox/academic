@@ -1,0 +1,81 @@
+:root {
+  --ink: #1a1a1a;
+  --muted: #666;
+  --rule: #dcdcdc;
+  --accent: #1f4e79;
+  --badge-preprint: #e8f0f7;
+  --badge-review: #fdf1e3;
+  --badge-published: #e9f5ec;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0 auto;
+  max-width: 46rem;
+  padding: 3rem 1.25rem 5rem;
+  font-family: Charter, "Bitstream Charter", "Iowan Old Style", Georgia, serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--ink);
+  background: #fff;
+}
+a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(31,78,121,.25); }
+a:hover { border-bottom-color: var(--accent); }
+header.site { border-bottom: 1px solid var(--rule); padding-bottom: 1.25rem; margin-bottom: 2.25rem; }
+header.site h1 { font-size: 1.65rem; margin: 0 0 .35rem; letter-spacing: -.01em; }
+header.site h1 a { border-bottom: none; color: var(--ink); }
+p.affil, p.contact { margin: .15rem 0; color: var(--muted); font-size: .95rem; }
+h2 { font-size: 1.15rem; margin: 2.5rem 0 1rem; font-weight: 600; }
+ul.papers { list-style: none; padding: 0; margin: 0; }
+ul.papers li { padding: 1.1rem 0; border-bottom: 1px solid var(--rule); }
+ul.papers li:first-child { border-top: 1px solid var(--rule); }
+a.title { font-size: 1.02rem; font-weight: 600; border-bottom: none; }
+a.title:hover { text-decoration: underline; }
+.meta { color: var(--muted); font-size: .88rem; margin-top: .3rem; }
+.badge {
+  display: inline-block; font-size: .7rem; letter-spacing: .04em;
+  text-transform: uppercase; padding: .12rem .45rem; border-radius: 3px;
+  margin-left: .45rem; vertical-align: .12em; font-family: ui-sans-serif, system-ui, sans-serif;
+}
+.badge.preprint { background: var(--badge-preprint); color: #24557d; }
+.badge.under-review { background: var(--badge-review); color: #8a5a17; }
+.badge.published { background: var(--badge-published); color: #24643a; }
+article.paper h1 { font-size: 1.45rem; line-height: 1.3; margin: 0 0 .6rem; letter-spacing: -.01em; }
+article.paper .authors { font-size: 1rem; margin: 0 0 .4rem; }
+article.paper .venue { color: var(--muted); font-size: .92rem; margin: 0 0 1.75rem; }
+h2 { font-size: .82rem; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); margin: 2.1rem 0 .6rem; font-family: ui-sans-serif, system-ui, sans-serif; font-weight: 600; }
+p.abstract { margin: 0; }
+ul.links { list-style: none; padding: 0; margin: 1.25rem 0 0; overflow-wrap: anywhere; }
+pre.bibtex {
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .8rem;
+  background: #f7f7f6; border: 1px solid var(--rule); border-radius: 4px;
+  padding: .85rem 1rem; overflow-x: auto; line-height: 1.5;
+}
+footer { margin-top: 3.5rem; padding-top: 1.1rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .82rem; }
+p.back { margin-top: 2.5rem; font-size: .92rem; }
+.paper-header { display: flex; align-items: flex-start; justify-content: space-between; gap: .85rem; }
+.paper-header h1 { min-width: 0; overflow-wrap: break-word; }
+.version-menu { position: relative; flex: none; font-size: .88rem; color: var(--accent); }
+.version-menu summary { cursor: pointer; padding: 0 .15rem .4rem; }
+.version-menu ul {
+  position: absolute; right: 0; z-index: 1; min-width: 100%;
+  list-style: none; margin: 0; padding: .25rem; background: #fff;
+  border: 1px solid var(--rule); border-radius: .2rem;
+}
+.version-menu li > * { display: block; padding: .35rem .6rem; border: 0; white-space: nowrap; }
+.version-menu a:hover, .version-menu a:focus-visible { text-decoration: underline; }
+.version-menu [aria-current] { color: var(--ink); font-weight: 600; }
+.pdf-preview {
+  display: block; width: 100%; height: clamp(22rem, 74vh, 55rem);
+  border: 1px solid var(--rule); background: #f5f5f5;
+}
+@media (max-width: 34rem) {
+  .paper-header { flex-wrap: wrap; gap: 0; }
+  .version-menu { margin: 0 0 .35rem auto; }
+}
+@media print {
+  body { max-width: none; padding: 0; }
+  .badge, .version-menu, footer, p.back, #pdf, .pdf-preview { display: none; }
+}
